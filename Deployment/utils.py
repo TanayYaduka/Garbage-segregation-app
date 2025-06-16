@@ -15,17 +15,7 @@ import os
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '1'
 
 def gen_labels():
-    train = './Data/Train'
-    train_generator = ImageDataGenerator(rescale = 1/255)
-
-    train_generator = train_generator.flow_from_directory(train,
-                                                        target_size = (300,300),
-                                                        batch_size = 32,
-                                                        class_mode = 'sparse')
-    labels = (train_generator.class_indices)
-    labels = dict((v,k) for k,v in labels.items())
-
-    return labels
+    return ['cardboard', 'glass', 'metal', 'paper', 'plastic', 'trash']
 
 def preprocess(image):
     image = np.array(image.resize((300, 300), Image.ANTIALIAS))
