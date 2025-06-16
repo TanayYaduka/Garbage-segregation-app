@@ -31,7 +31,7 @@ st.markdown('''
   </div>
 ''', unsafe_allow_html=True)
 
-st.set_option('deprecation.showfileUploaderEncoding', False)
+
 
 # Upload Option
 opt = st.selectbox("How do you want to upload the image for classification?", 
