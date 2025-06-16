@@ -18,11 +18,10 @@ def gen_labels():
     return ['cardboard', 'glass', 'metal', 'paper', 'plastic', 'trash']
 
 def preprocess(image):
-    image = np.array(image.resize((300, 300), Image.ANTIALIAS))
-    image = np.array(image, dtype='uint8')
-    image = np.array(image)/255.0
-
+    image = image.resize((300, 300), Image.Resampling.LANCZOS)  # ✅ FIXED HERE
+    image = np.array(image) / 255.0
     return image
+
 
 def model_arc():
     model = Sequential()
