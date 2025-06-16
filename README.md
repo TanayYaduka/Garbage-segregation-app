@@ -101,7 +101,7 @@ Made by **Tanay Yaduka**
 
 ## 🛠️ How We Built It
 
-![How We Built It](https://i.postimg.cc/ZKbWbSbz/how-we-built-it.png)
+
 
 These are the steps involved in making this project:
 
